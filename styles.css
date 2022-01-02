@@ -6,7 +6,7 @@
     font-size: 1rem;
     line-height: 1rem;
 
-    color: var(--reference-color);
+    color: var(--text-muted);
     background-color: var(--background-primary);
 
     position: absolute;
