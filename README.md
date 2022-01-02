@@ -33,4 +33,6 @@ In my day job, I am a researcher in sociology. In my PhD project, I investigate 
 - [Discord](https://discord.gg/veuWUTm): `@pseudometa#9546`
 - Twitter: [@pseudo_meta](https://twitter.com/pseudo_meta)
 
+---
+
 [⬆️ Go Back to Top](#Table-of-Contents)
