@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
-	"version": "0.12.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"name": "obsidian-footnote-indicator",
+	"version": "0.13.14",
+	"description": "Indicates the presence of footnotes in the gutter and the Status bar",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
