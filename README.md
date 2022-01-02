@@ -1,6 +1,7 @@
 # Footnote Indicator
 
-![](https://img.shields.io/github/downloads/chrisgrieser/obsidian-footnote-indicator/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/obsidian-footnote-indicator?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
+<!-- ![](https://img.shields.io/github/downloads/chrisgrieser/obsidian-footnote-indicator/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/obsidian-footnote-indicator?label=Latest%20Release&style=plastic)  -->
+[![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
 A plugin for [Obsidian](https://obsidian.md/) that indicates the presence of footnotes in the gutter and the Status bar
 
