@@ -1,9 +1,9 @@
 {
-	"id": "obsidian-footnote-indicator",
-	"name": "Footnote Indicator",
+	"id": "{{plugin-id}}",
+	"name": "{{plugin-name}}",
 	"version": "0.1",
-	"minAppVersion": "0.13.14",
-	"description": "Indicates the presence of footnotes in the gutter and the Status bar.",
+	"minAppVersion": "0.13.19",
+	"description": "{{plugin-desc}}",
 	"author": "pseudometa",
 	"authorUrl": "https://chris-grieser.de/",
 	"isDesktopOnly": false
