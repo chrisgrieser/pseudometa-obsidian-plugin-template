@@ -5,13 +5,11 @@
 {{plugin-desc}}
 
 ## Table of Contents
-<!-- MarkdownTOC -->
+<!-- MarkdownTOC levels="2" -->
 
 - [Installation](#installation)
 - [Contribute](#contribute)
-- [About the Creator](#about-the-creator)
-	- [Profiles](#profiles)
-	- [Donate](#donate)
+- [About the Developer](#about-the-developer)
 
 <!-- /MarkdownTOC -->
 
@@ -28,7 +26,7 @@ Please use the `.eslintrc` configuration located in the repository and run eslin
 eslint --fix *.ts
 ```
 
-## About the Creator
+## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
 
 ### Profiles
