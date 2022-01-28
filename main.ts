@@ -2,8 +2,8 @@ import { Plugin } from "obsidian";
 
 export default class footnoteIndicator extends Plugin {
 
-	async onload() { console.log("Footnote Indicator Plugin loaded.") }
+	async onload() { console.log("{{plugin-name}} Plugin loaded.") }
 
-	async onunload() { console.log("Footnote Indicator Plugin unloaded.") }
+	async onunload() { console.log("{{plugin-name}} Plugin unloaded.") }
 
 }
