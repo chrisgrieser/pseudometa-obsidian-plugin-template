@@ -5,7 +5,7 @@
 {{plugin-desc}}
 
 ## Table of Contents
-<!-- MarkdownTOC levels="2" -->
+<!-- MarkdownTOC -->
 
 - [Installation](#installation)
 - [Contribute](#contribute)
