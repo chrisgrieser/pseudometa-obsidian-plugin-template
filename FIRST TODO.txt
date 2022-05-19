@@ -4,4 +4,18 @@ Replace throughout the repo:
 {{plugin-desc}}
 {{plugin-class}}
 
+---
+
 add/remove style.css from the realease.yml
+
+---
+to copypaste into the obsidian releases json:
+
+    },
+    {
+        "id": "{{plugin-id}}",
+        "name": "{{plugin-name}}",
+        "author": "pseudometa",
+        "description": "{{plugin-desc}}",
+        "repo": "chrisgrieser/{{plugin-id}}"
+    }
