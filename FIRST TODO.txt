@@ -6,9 +6,10 @@ Replace throughout the repo:
 
 ---
 
-add/remove style.css from the realease.yml
+add/remove style.css from the release.yml
 
 ---
+
 to copypaste into the obsidian releases json:
 
     },
