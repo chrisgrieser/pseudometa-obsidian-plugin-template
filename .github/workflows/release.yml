@@ -20,7 +20,7 @@ jobs:
           node-version: "17.x" # node version, get via `node --version`
 
       - name: Build
-        id: build # add styles.css in cp line, if it is used
+        id: build # remove styles.css in cp line, if it isn't used
         run: |
           npm install
           npm run build
