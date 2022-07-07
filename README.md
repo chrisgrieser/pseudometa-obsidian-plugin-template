@@ -1,6 +1,6 @@
 # {{plugin-name}}
 
-<!-- ![](https://img.shields.io/github/downloads/chrisgrieser/{{plugin-id}}/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/{{plugin-id}}?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md) -->
+![](https://img.shields.io/github/downloads/chrisgrieser/{{plugin-id}}/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/{{plugin-id}}?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
 {{plugin-desc}}
 
