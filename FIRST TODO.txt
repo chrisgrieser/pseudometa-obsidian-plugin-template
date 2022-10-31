@@ -1,3 +1,7 @@
+update configs from Obsidian Sample plugin
+
+---
+
 Replace throughout the repo: 
 {{plugin-name}}
 {{plugin-id}}
