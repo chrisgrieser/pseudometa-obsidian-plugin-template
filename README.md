@@ -6,13 +6,11 @@
 
 ## Table of Contents
 <!--toc:start-->
-
 - [Installation](#installation)
 - [Contribute](#contribute)
 - [About the Developer](#about-the-developer)
 	- [Profiles](#profiles)
 	- [Donate](#donate)
-
 <!--toc:end-->
 
 ## Installation
@@ -20,18 +18,10 @@ Right now, the plugin is still in beta. It can be installed with the [BRAT Plugi
 
 When published, it will be available in Obsidian's Community Plugin Browser via: `Settings` → `Community Plugins` → `Browse` → Search for *"{{plugin-name}}"*
 
-## Contribute
-Please use the [`.eslintrc` configuration located in the repository](.eslintrc) and run eslint before doing a pull request, and please do *not* use `prettier`. 🙂
-
-```shell
-# Run eslint fixing most common mistakes
-eslint --fix *.ts
-```
-
-## About the Developer
+<!-- vale Google.FirstPerson = NO --> <!-- vale Microsoft.FirstPerson = NO -->
+## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
 
-<!-- markdown-link-check-disable -->
 ### Profiles
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
