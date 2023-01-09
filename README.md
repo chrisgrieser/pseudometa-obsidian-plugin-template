@@ -5,16 +5,15 @@
 {{plugin-desc}}
 
 ## Table of Contents
+
 <!--toc:start-->
+- [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-- [Contribute](#contribute)
-- [About the Developer](#about-the-developer)
-	- [Profiles](#profiles)
-	- [Donate](#donate)
+- [About the developer](#about-the-developer)
 <!--toc:end-->
 
 ## Installation
-Right now, the plugin is still in beta. It can be installed with the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
+For now, the plugin is still in beta. It can be installed with the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).,
 
 When published, it will be available in Obsidian's Community Plugin Browser via: `Settings` → `Community Plugins` → `Browse` → Search for *"{{plugin-name}}"*
 
@@ -22,7 +21,7 @@ When published, it will be available in Obsidian's Community Plugin Browser via:
 ## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
 
-### Profiles
+__Profiles__  
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
@@ -30,5 +29,5 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 - [Twitter](https://twitter.com/pseudo_meta)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
-### Buy Me a Coffee
+__Buy Me a Coffee__  
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
