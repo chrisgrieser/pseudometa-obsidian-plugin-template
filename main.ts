@@ -3,9 +3,19 @@ import { Plugin } from "obsidian";
 export default class {{plugin-class}} extends Plugin {
 
 	async onload() {
-		console.log("{{plugin-name}} Plugin loaded.");
+		console.info("{{plugin-name}} Plugin loaded.");
+		
+		this.addCommand({
+			id: "command-id",
+			name: "Command Name",
+			callback: () => this.myFunction(),
+		});
 	}
 
-	async onunload() { console.log("{{plugin-name}} Plugin unloaded.") }
+	async onunload() { console.info("{{plugin-name}} Plugin unloaded.") }
+	
+	myFunction () {
+		
+	}
 
 }
