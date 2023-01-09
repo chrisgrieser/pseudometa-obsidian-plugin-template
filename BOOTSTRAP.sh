@@ -28,3 +28,8 @@ replacePlaceholders "plugin-id" "$id"
 replacePlaceholders "plugin-desc" "$desc"
 replacePlaceholders "plugin-class" "$class"
 replacePlaceholders "year" "$year"
+
+#───────────────────────────────────────────────────────────────────────────────
+
+# make this script delete itself
+rm -- "$0"
