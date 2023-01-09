@@ -1,6 +1,6 @@
 name: Release Obsidian plugin
 
-on:
+on:  # yamllint disable rule:truthy
   push:
     tags:
       - "*"
