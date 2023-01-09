@@ -1,4 +1,4 @@
-name: Feature request
+name: Feature Request
 description: Suggest an idea
 title: "Feature Request: "
 labels: ["feature request"]
@@ -22,4 +22,3 @@ body:
       options:
         - label: The feature would be useful to more users than just me.
           required: true
-
