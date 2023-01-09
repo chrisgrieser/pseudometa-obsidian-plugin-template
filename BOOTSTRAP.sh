@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+set -e # abort when any command errors, prevents this script from self-removing at the end if anything went wrong
+
 echo "Plugin Name:"
 read -r name
 
@@ -32,6 +34,9 @@ replacePlaceholders "plugin-id" "$id"
 replacePlaceholders "plugin-desc" "$desc"
 replacePlaceholders "plugin-class" "$class"
 replacePlaceholders "year" "$year"
+
+echo "give github actions write permissions for the release workflow"
+open -a "https://github.com/$repo/settings/actions"
 
 #───────────────────────────────────────────────────────────────────────────────
 
