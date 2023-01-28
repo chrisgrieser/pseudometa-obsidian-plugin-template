@@ -3,7 +3,7 @@ import { Plugin } from "obsidian";
 export default class {{plugin-class}} extends Plugin {
 
 	async onload() {
-		console.info("{{plugin-name}} Plugin loaded.");
+		console.info(this.manifest.name + " Plugin loaded.");
 		
 		this.addCommand({
 			id: "command-id",
@@ -12,7 +12,7 @@ export default class {{plugin-class}} extends Plugin {
 		});
 	}
 
-	async onunload() { console.info("{{plugin-name}} Plugin unloaded.") }
+	async onunload() { console.info(this.manifest.name + " Plugin unloaded.") }
 	
 	myFunction () {
 		
