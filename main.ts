@@ -1,3 +1,4 @@
+/* globals HTMLElement */
 import { Plugin } from "obsidian";
 
 export default class {{plugin-class}} extends Plugin {
