@@ -13,7 +13,7 @@ id=$(echo "$repo" | cut -d/ -f2)
 desc=$(curl -sL "https://api.github.com/repos/$repo" | grep "description" | head -n1 | cut -d'"' -f4)
 
 # plugin class can be id in camelcase and therefore also inferred
-class=$(echo "$id" | perl -pe 's/-(\w)/\U$1/g')
+class=$(echo "$id" | perl -pe 's/^(\w)/\U$1/' | perl -pe 's/-(\w)/\U$1/g') # kebab-case to PascalCase
 
 # current year for license
 year=$(date +"%Y")
@@ -24,8 +24,8 @@ year=$(date +"%Y")
 # $1: placeholder name as {{mustache-template}}
 # $2: the replacement
 function replacePlaceholders() {
-	# INFO macOS' sed requires sed i '', remove the '' when on Linux or using GNU sed
-	LC_ALL=C # prevent byte sequence error for whatever reason
+	# INFO macOS' sed requires `sed -i ''`, remove the `''` when on Linux or using GNU sed
+	LC_ALL=C # prevent byte sequence error
 	find . -type f -not -path '*/\.git/*' -not -name ".DS_Store" -not -path '*/node_modules/*' -exec sed -i '' "s/{{$1}}/$2/g" {} \;
 }
 
