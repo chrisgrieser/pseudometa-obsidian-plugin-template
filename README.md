@@ -7,7 +7,6 @@
 ## Table of Contents
 
 <!--toc:start-->
-- [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [About the developer](#about-the-developer)
 <!--toc:end-->
