@@ -5,80 +5,65 @@ extends:
   - plugin:@typescript-eslint/eslint-recommended
   - plugin:@typescript-eslint/recommended
 plugins: ["@typescript-eslint"]
-root: true # stop annoying deprecation warning
+root: true
 parser: "@typescript-eslint/parser"
 parserOptions:
-  ecmaVersion: 2021
+  ecmaVersion: 2022
   sourceType: module
+env:
+  node: true
 
 #───────────────────────────────────────────────────────────────────────────────
 rules:
 
   # TypeScript specific
-  "@typescript-eslint/no-unused-vars": off
+  "@typescript-eslint/no-unused-vars": warn
   "@typescript-eslint/ban-ts-comment": 
     - warn
     - ts-ignore: allow-with-description
       ts-expect-error: allow-with-description
   "@typescript-eslint/no-empty-function": warn
-  no-unused-vars: warn
-  require-await: off # errors for `async onload`, still have to figure out how to fix
+  require-await: off # TODO errors for `async onload`, still have to figure out how to fix
 
-  # code structure
-  complexity: [error, 13]
-  max-depth: [error, 4]
+  # structure
+  complexity: [warn, 15]
+  max-depth: [warn, 4]
+
+  # General
+  no-implicit-coercion: error
+  no-unused-expressions: error
 
   # variables
+  no-unused-vars: warn
+  id-length:
+    - warn
+    - min: 4
+      max: 25
+      properties: never
+      exceptions: [x, y, i, j, id, min, max, app, str, int, out]
+  no-underscore-dangle: warn
   no-shadow:
-    - error
+    - warn
     - builtinGlobals: true
       hoist: all
   camelcase:
     - warn
     - properties: always
       ignoreImports: true
-  no-var: error
+  no-var: warn
   prefer-const: warn
   sort-vars: warn
-  no-use-before-define: error
+  no-use-before-define: warn
   no-multi-assign: error
   no-sequences: error
   no-undefined: error
   one-var-declaration-per-line:
-    - error
+    - warn
     - initializations
-
-  # spaces
-  no-mixed-spaces-and-tabs: warn
-  indent:
-    - warn
-    - tab
-    - SwitchCase: 1
-  no-multi-spaces: warn
-  array-bracket-spacing: warn
-  space-before-blocks: warn
-  semi-spacing: warn
-  object-curly-spacing:
-    - warn
-    - always
-  no-whitespace-before-property: error
-  arrow-spacing: warn
-  keyword-spacing: warn
-  spaced-comment:
-    - warn
-    - always
-    - exceptions: ["-", "_", "─"]
-
-  # new lines
-  object-curly-newline:
-    - warn
-    - multiline: true
-  newline-per-chained-call:
-    - error
-    - ignoreChainWithDepth: 3
+  no-lone-blocks: error
 
   # Async & Await
-  no-await-in-loop: warn
+  no-await-in-loop: error
   require-atomic-updates: error
 
   # Functions
@@ -87,7 +72,13 @@ rules:
     - error
     - checkForEach: false
       allowImplicit: true
-  no-useless-return: error
+  no-confusing-arrow: warn
+  no-useless-return: warn
+  consistent-return: warn
+  func-names: warn
+  func-style:
+    - warn
+    - declaration
 
   # Parenthesis
   no-extra-parens:
@@ -96,65 +87,76 @@ rules:
     - returnAssign: false
 
   # Loops
-  no-unmodified-loop-condition: error
+  no-unmodified-loop-condition: warn
   no-unreachable-loop: error
+
+  # Comments
+  spaced-comment:
+    - warn
+    - always
+    - exceptions: ["-", "_", "─"]
+  capitalized-comments:
+    - error
+    - always
+    - ignoreInlineComments: true
 
   # Semicolon
   no-extra-semi: warn
   semi-style:
-    - error
+    - warn
     - last
 
   # Commas
   comma-spacing: warn
   comma-style: warn
-  comma-dangle:
-    - warn
-    - always-multiline
   quotes:
     - warn
     - double
     - avoidEscape: true
       allowTemplateLiterals: true
 
-  # Imports
-  no-duplicate-imports: warn
+  # Imports & eval
+  no-duplicate-imports: error
   sort-imports: warn
   dot-notation: error
+  no-eval: error
+  no-implied-eval: error
 
-  # Strings
+  # Strings & Regex
+  no-template-curly-in-string: error
   no-useless-concat: warn
   no-multi-str: error
+  prefer-template: warn
+  prefer-regex-literals:
+    - warn
+    - disallowRedundantWrapping: true
 
   # Numbers
   no-magic-numbers:
-    - error
-    - ignore: [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 0.1, 0.2, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 100, 1000, 10000, 1024]
+    - warn
+    # prettier-ignore
+    - ignore: [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 0.1, 0.2, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 100, 1000]
       ignoreArrayIndexes: true
+      ignoreDefaultValues: true
   no-floating-decimal: warn
-  no-implicit-coercion: error
 
-  # Regex
-  prefer-regex-literals:
-    - error
-    - disallowRedundantWrapping: true
+  # Arrays
+  prefer-spread: warn
+  prefer-object-spread: warn
 
   # Conditions
+  default-case: error # switch/case
+  default-case-last: warn
   eqeqeq: error
-  no-eq-null: error
+  no-self-compare: error
+  no-eq-null: warn
   no-negated-condition: error
   no-unneeded-ternary: warn
   no-nested-ternary: error
+  no-constant-binary-expression: error
   yoda: warn
   no-else-return:
-    - error
+    - warn
     - allowElseIf: true
   no-lonely-if: warn
-  no-mixed-operators:
-    - error
-    - groups:
-        - ['%', '**']
-        - ['&', '|', ^, "~", <<, '>>', '>>>']
-        - [==, '!=', ===, '!==', '>', '>=', <, <=]
-        - ['&&', '||']
-        - [in, instanceof]
+  no-mixed-operators: error
