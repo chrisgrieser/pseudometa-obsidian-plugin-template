@@ -26,6 +26,8 @@ rules:
   "@typescript-eslint/no-empty-function": warn
   require-await: off # TODO errors for `async onload`, still have to figure out how to fix
 
+#───────────────────────────────────────────────────────────────────────────────
+
   # structure
   complexity: [warn, 15]
   max-depth: [warn, 4]
@@ -35,13 +37,13 @@ rules:
   no-unused-expressions: error
 
   # variables
-  no-unused-vars: warn
+  no-unused-vars: warn 
   id-length:
     - warn
     - min: 4
       max: 25
       properties: never
-      exceptions: [x, y, i, j, id, min, max, app, str, int, out]
+      exceptions: [x, y, i, j, id, min, max, app, str, int, out, a, b, num, url]
   no-underscore-dangle: warn
   no-shadow:
     - warn
@@ -66,6 +68,7 @@ rules:
   # Async & Await
   no-await-in-loop: error
   require-atomic-updates: error
+  # require-await: error # TODO figure out why this triggers in Obsidian onload function
 
   # Functions
   no-empty-function: warn
@@ -96,10 +99,6 @@ rules:
     - warn
     - always
     - exceptions: ["-", "_", "─"]
-  capitalized-comments:
-    - error
-    - always
-    - ignoreInlineComments: true
 
   # Semicolon
   no-extra-semi: warn
@@ -127,7 +126,6 @@ rules:
   no-template-curly-in-string: error
   no-useless-concat: warn
   no-multi-str: error
-  prefer-template: warn
   prefer-regex-literals:
     - warn
     - disallowRedundantWrapping: true
@@ -136,7 +134,7 @@ rules:
   no-magic-numbers:
     - warn
     # prettier-ignore
-    - ignore: [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 0.1, 0.2, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 100, 1000]
+    - ignore: [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 0.1, 0.2, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 100, 1000, 10000]
       ignoreArrayIndexes: true
       ignoreDefaultValues: true
   no-floating-decimal: warn
@@ -161,3 +159,4 @@ rules:
     - allowElseIf: true
   no-lonely-if: warn
   no-mixed-operators: error
+
