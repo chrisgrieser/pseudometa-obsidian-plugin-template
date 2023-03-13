@@ -37,13 +37,12 @@ rules:
   no-unused-expressions: error
 
   # variables
-  no-unused-vars: warn 
   id-length:
     - warn
     - min: 4
       max: 25
       properties: never
-      exceptions: [x, y, i, j, id, min, max, app, str, int, out, a, b, num, url]
+      exceptions: [x, y, i, j, id, min, max, app, str, int, out, a, b, num, url, run, arr, tag, ext]
   no-underscore-dangle: warn
   no-shadow:
     - warn
@@ -83,6 +82,7 @@ rules:
   func-style:
     - warn
     - declaration
+    - allowArrowFunctions: true
 
   # Parenthesis
   no-extra-parens:
@@ -159,4 +159,3 @@ rules:
     - allowElseIf: true
   no-lonely-if: warn
   no-mixed-operators: error
-
