@@ -35,7 +35,7 @@ replacePlaceholders "plugin-desc" "$desc"
 replacePlaceholders "plugin-class" "$class"
 replacePlaceholders "year" "$year"
 
-echo "give github actions write permissions for the release workflow"
+osascript -e 'display notification "" with title "ℹ️ Write Permissions for workflow needed."'
 open -a "https://github.com/$repo/settings/actions"
 
 #───────────────────────────────────────────────────────────────────────────────
