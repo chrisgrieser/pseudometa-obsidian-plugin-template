@@ -26,7 +26,7 @@ year=$(date +"%Y")
 function replacePlaceholders() {
 	# INFO macOS' sed requires `sed -i ''`, remove the `''` when on Linux or using GNU sed
 	LC_ALL=C # prevent byte sequence error
-	find . -type f -not -path '*/\.git/*' -not -name ".DS_Store" -not -path '*/node_modules/*' -exec sed -i '' "s/{{$1}}/$2/g" {} \;
+	find . -type f -not -path '*/\.git/*' -not -name ".DS_Store" -not -path '*/node_modules/*' -exec sed -i '' "s/$1/$2/g" {} \;
 }
 
 replacePlaceholders "{{plugin-name}}" "$name"
