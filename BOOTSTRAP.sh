@@ -29,16 +29,18 @@ function replacePlaceholders() {
 	find . -type f -not -path '*/\.git/*' -not -name ".DS_Store" -not -path '*/node_modules/*' -exec sed -i '' "s/{{$1}}/$2/g" {} \;
 }
 
-replacePlaceholders "plugin-name" "$name"
-replacePlaceholders "plugin-id" "$id"
-replacePlaceholders "plugin-desc" "$desc"
-replacePlaceholders "plugin-class" "$class"
-replacePlaceholders "year" "$year"
+replacePlaceholders "{{plugin-name}}" "$name"
+replacePlaceholders "{{plugin-id}}" "$id"
+replacePlaceholders "{{plugin-desc}}" "$desc"
+replacePlaceholders "{{plugin-class}}" "$class"
+replacePlaceholders "{{year}}" "$year"
 
 osascript -e 'display notification "" with title "ℹ️ Write Permissions for workflow needed."'
 open -a "https://github.com/$repo/settings/actions"
 
 #───────────────────────────────────────────────────────────────────────────────
+
+print "\033[1;32mSuccess. Script will delete itself."
 
 # make this script delete itself
 rm -- "$0"
