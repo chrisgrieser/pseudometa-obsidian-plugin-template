@@ -7,6 +7,11 @@
 		"indentSize": 3,
 		"formatWithErrors": true
 	},
+	"javascript": {
+		"globals": [
+			"electronWindow"
+		]
+	},
 	"files": {
 		"ignore": [
 			"main.js",
@@ -20,7 +25,16 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"all": true
+			"all": true,
+			"style": {
+				"useBlockStatements": "off",
+				"useConst": "warn",
+				"useTemplate": "off",
+				"useSingleVarDeclarator": "off"
+			},
+			"nursery": {
+				"noExtraSemicolons": "off"
+			}
 		}
 	}
 }
