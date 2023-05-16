@@ -12,12 +12,9 @@
 			"electronWindow"
 		]
 	},
-	"files": {
-		"ignore": [
-			"main.js",
-			"dist/**",
-			"node_modules/**"
-		]
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git"
 	},
 	"organizeImports": {
 		"enabled": true
