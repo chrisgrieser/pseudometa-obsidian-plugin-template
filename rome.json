@@ -26,6 +26,9 @@
 		"enabled": true,
 		"rules": {
 			"all": true,
+			"nursery": {
+				"all": false
+			},
 			"style": {
 				"useBlockStatements": "off",
 				"useConst": "warn",
