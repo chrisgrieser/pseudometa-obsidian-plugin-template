@@ -1,35 +1,47 @@
 {
 	"$schema": "https://raw.githubusercontent.com/rome/tools/main/npm/rome/configuration_schema.json",
+	"files": {
+		"ignore": [
+			"node_modules/**"
+		]
+	},
 	"formatter": {
-		"enabled": true,
-		"lineWidth": 120,
+		"lineWidth": 110,
 		"indentStyle": "tab",
 		"indentSize": 3,
 		"formatWithErrors": true
-	},
-	"javascript": {
-		"globals": [
-			"electronWindow"
-		]
 	},
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git"
 	},
+	"javascript": {
+		"globals": [
+			"ObjC",
+			"Application",
+			"delay",
+			"Path",
+			"$"
+		]
+	},
 	"organizeImports": {
 		"enabled": true
 	},
 	"linter": {
-		"enabled": true,
 		"rules": {
 			"all": true,
 			"nursery": {
 				"all": false
 			},
+			"complexity": {
+				"noExtraSemicolon": "warn"
+			},
 			"style": {
 				"useBlockStatements": "off",
 				"useConst": "warn",
+				"noParameterAssign": "off",
 				"useTemplate": "off",
+				"noUnusedTemplateLiteral": "warn",
 				"useSingleVarDeclarator": "off"
 			}
 		}
