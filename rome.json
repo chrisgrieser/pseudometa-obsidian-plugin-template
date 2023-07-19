@@ -17,11 +17,8 @@
 	},
 	"javascript": {
 		"globals": [
-			"ObjC",
-			"Application",
-			"delay",
-			"Path",
-			"$"
+			"app",
+			"activeWindow"
 		]
 	},
 	"organizeImports": {
