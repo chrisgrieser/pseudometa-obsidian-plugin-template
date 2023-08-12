@@ -5,41 +5,25 @@
 
 #───────────────────────────────────────────────────────────────────────────────
 
-# ensure relevant files exist
-if [[ ! -f "./manifest.json" ]] ; then
-	echo "manifest.json does not exist yet"
-	exit 1
-elif [[ ! -f "./versions.json" ]] ; then
-	echo "versions.json does not exist yet"
-	exit 1
-elif [[ ! -f "./package.json" ]] ; then
-	echo "package.json does not exist yet"
-	exit 1
-elif [[ ! -f "./.github/workflows/release.yml" ]] ; then
-	echo "/.github/workflows/release.yml does not exist yet"
-	exit 1
-fi
-
-#───────────────────────────────────────────────────────────────────────────────
-
-# Prompt for version number, if not entered
+# Prompt for version number
 currentVersion=$(grep "version" "./manifest.json" | cut -d\" -f4)
 echo "current version: $currentVersion"
 echo -n "   next version: "
 read -r nextVersion
-echo
+echo "────────────────────────"
 
 # set version number in `manifest.json`
 sed -E -i '' "s/\"version\".*/\"version\": \"$nextVersion\",/" "manifest.json"
 sed -E -i '' "s/\"version\".*/\"version\": \"$nextVersion\",/" "package.json"
 
 # add version number in `versions.json`, assuming same compatibility
-grep -Ev "^$" "versions.json" | grep -v "}" | sed -e '$ d' > temp
+grep -Ev "^$" "versions.json" | grep -v "}" | sed -e '$ d' >temp
 minObsidianVersion=$(grep -Ev "^$" "versions.json" | grep -v "}" | tail -n1 | cut -d\" -f4)
-# shellcheck disable=SC2129
-echo "  \"$currentVersion\": \"$minObsidianVersion\"," >> temp
-echo "  \"$nextVersion\": \"$minObsidianVersion\"" >> temp
-echo "}" >> temp
+{
+	echo "  \"$currentVersion\": \"$minObsidianVersion\","
+	echo "  \"$nextVersion\": \"$minObsidianVersion\""
+	echo "}"
+} >>temp
 mv temp versions.json
 
 #───────────────────────────────────────────────────────────────────────────────

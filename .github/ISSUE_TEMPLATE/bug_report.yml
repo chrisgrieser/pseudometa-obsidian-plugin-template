@@ -1,7 +1,7 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug"]
+labels: [bug]
 body:
   - type: textarea
     id: bug-description
@@ -29,17 +29,10 @@ body:
     id: obsi-version
     attributes:
       label: Obsidian Version
-      description: You can find the version in the *About* Tab of the settings.
-      placeholder: 0.13.19
+      description: You can find the version in the *About* tab of the settings.
+      placeholder: 1.1.2
     validations:
       required: true
-  - type: checkboxes
-    id: editor
-    attributes:
-      label: Which editor are you using?
-      options:
-        - label: New Editor
-        - label: Legacy Editor
   - type: checkboxes
     id: checklist
     attributes:
@@ -47,4 +40,3 @@ body:
       options:
         - label: I updated to the latest version of the plugin.
           required: true
-
