@@ -1,9 +1,9 @@
 {
 	"name": "{{plugin-name}}",
 	"description": "{{plugin-desc}}",
+	"author": "Chris Grieser",
 	"version": "0.1.0",
 	"keywords": [],
-	"author": "Chris Grieser",
 	"license": "MIT",
 	"main": "main.js",
 	"scripts": {
