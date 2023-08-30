@@ -1,9 +1,7 @@
 {
-	"$schema": "https://raw.githubusercontent.com/rome/tools/main/npm/rome/configuration_schema.json",
+	"$schema": "https://raw.githubusercontent.com/biomejs/biome/main/editors/vscode/configuration_schema.json",
 	"files": {
-		"ignore": [
-			"node_modules/**"
-		]
+		"ignore": ["node_modules/**"]
 	},
 	"formatter": {
 		"lineWidth": 110,
@@ -11,27 +9,19 @@
 		"indentSize": 3,
 		"formatWithErrors": true
 	},
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git"
+	"organizeImports": { "enabled": true },
+	"vcs": { "enabled": true, "clientKind": "git" },
+	"json": {
+		"parser": { "allowComments": true }
 	},
 	"javascript": {
-		"globals": [
-			"app",
-			"activeWindow"
-		]
-	},
-	"organizeImports": {
-		"enabled": true
+		"globals": ["ObjC", "Application", "delay", "Path", "$"]
 	},
 	"linter": {
 		"rules": {
 			"all": true,
-			"nursery": {
-				"all": false
-			},
-			"complexity": {
-				"noExtraSemicolon": "warn"
+			"suspicious": {
+				"noConsoleLog": "off"
 			},
 			"style": {
 				"useBlockStatements": "off",

@@ -17,6 +17,6 @@
 		"obsidian": "latest",
 		"tslib": "2.3.1",
 		"typescript": "4.4.4",
-		"rome": "latest"
+		"@biomejs/biome": "latest"
 	}
 }
