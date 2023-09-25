@@ -4,12 +4,12 @@
 
 {{plugin-desc}}
 
-## Table of Contents
+<!-- toc -->
 
-<!--toc:start-->
 - [Installation](#installation)
 - [About the developer](#about-the-developer)
-<!--toc:end-->
+
+<!-- tocstop -->
 
 ## Installation
 For now, the plugin is still in beta. It can be installed with the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).,
