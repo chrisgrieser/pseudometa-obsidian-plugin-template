@@ -12,7 +12,7 @@
 <!-- tocstop -->
 
 ## Installation
-For now, the plugin is still in beta. It can be installed with the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).,
+For now, the plugin is still in beta. It can be installed with the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
 
 When published, it is going to be available in Obsidian's Community Plugin
 Browser via: `Settings` → `Community Plugins` → `Browse` → Search for _"{{plugin-name}}"_
