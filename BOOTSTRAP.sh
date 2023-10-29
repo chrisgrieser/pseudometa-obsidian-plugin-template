@@ -2,7 +2,7 @@
 
 set -e # abort when any command errors, prevents this script from self-removing at the end if anything went wrong
 
-echo "Plugin Name:"
+echo -n "Plugin Name:"
 read -r name
 
 # plugin id is the same as the git repo name and can therefore be inferred
@@ -36,7 +36,7 @@ replacePlaceholders "{{plugin-class}}" "$class"
 replacePlaceholders "{{year}}" "$year"
 
 osascript -e 'display notification "" with title "ℹ️ Write Permissions for workflow needed."'
-open -a "https://github.com/$repo/settings/actions"
+open "https://github.com/$repo/settings/actions"
 
 #───────────────────────────────────────────────────────────────────────────────
 
