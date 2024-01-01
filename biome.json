@@ -14,6 +14,7 @@
 			"all": true,
 			"suspicious": { "noConsoleLog": "off" },
 			"complexity": { "noExcessiveCognitiveComplexity": "off" },
+			"nursery": { "noDefaultExport": "off" },
 			"style": {
 				"useTemplate": "off",
 				"noParameterAssign": "off",
