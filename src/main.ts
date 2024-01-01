@@ -12,10 +12,10 @@ export default class {{plugin-class}} extends Plugin {
 		});
 	}
 
-	async onunload() { console.info(this.manifest.name + " Plugin unloaded.") }
+	onunload() { console.info(this.manifest.name + " Plugin unloaded.") }
 	
 	myFunction () {
-		
+		console.log("");
 	}
 
 }
