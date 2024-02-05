@@ -29,6 +29,7 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
 - [GitHub](https://github.com/chrisgrieser/)
+- [Mastodon](https://pkm.social/@pseudometa)
 - [Twitter](https://twitter.com/pseudo_meta)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
