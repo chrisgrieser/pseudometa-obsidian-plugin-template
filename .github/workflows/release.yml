@@ -1,6 +1,5 @@
 name: Release Obsidian plugin
 
-# yamllint disable rule:truthy
 on:
   push:
     tags: ["*"]
@@ -17,13 +16,13 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "18.x" # node version, get via `node --version`
+          node-version: "21.x" # node version, get via `node --version`
 
       - name: Build
-        id: build # remove styles.css in cp line, if it isn't used
+        id: build # TODO remove styles.css in cp line, if it isn't used
         run: |
           npm install
-          npm run build
+          node esbuild.config.mjs minified
           mkdir ${{ env.PLUGIN_NAME }}
           cp main.js manifest.json styles.css ${{ env.PLUGIN_NAME }}
           zip -r ${{ env.PLUGIN_NAME }}.zip ${{ env.PLUGIN_NAME }}
