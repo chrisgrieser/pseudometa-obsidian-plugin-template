@@ -2,7 +2,7 @@ import { Plugin } from "obsidian";
 
 export default class {{plugin-class}} extends Plugin {
 
-	async onload() {
+	override onload() {
 		console.info(this.manifest.name + " Plugin loaded.");
 		
 		this.addCommand({
@@ -12,10 +12,12 @@ export default class {{plugin-class}} extends Plugin {
 		});
 	}
 
-	onunload() { console.info(this.manifest.name + " Plugin unloaded.") }
+	override onunload() { 
+		console.info(this.manifest.name + " Plugin unloaded.");
+	}
 	
 	myFunction () {
-		console.log("");
+		console.log("Hello World");
 	}
 
 }
