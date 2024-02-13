@@ -9,6 +9,9 @@
 		"indentWidth": 3,
 		"formatWithErrors": true
 	},
+	"json": {
+		"parser": { "allowComments": true }
+	},
 	"linter": {
 		"rules": {
 			"all": true,
