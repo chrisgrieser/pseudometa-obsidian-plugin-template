@@ -17,6 +17,19 @@ For now, the plugin is still in beta. It can be installed with the [BRAT Plugin]
 When published, it is going to be available in Obsidian's Community Plugin
 Browser via: `Settings` → `Community Plugins` → `Browse` → Search for _"{{plugin-name}}"_
 
+
+### Development
+
+```bash
+make init
+make format
+make build
+```
+
+> [!NOTE]
+> This repo uses a pre-commit hook, which requires prevents commits that do not
+> build or have issues reported by `biome`.
+
 <!-- vale Google.FirstPerson = NO -->
 ## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the
@@ -24,7 +37,6 @@ digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-**Profiles**  
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
@@ -34,10 +46,6 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'>
-<img
-	height='36'
-	style='border:0px;height:36px;'
-	src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
-	border='0'
-	alt='Buy Me a Coffee at ko-fi.com'
-/></a>
+<img height='36' style='border:0px;height:36px;'
+src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at
+ko-fi.com' /></a>
