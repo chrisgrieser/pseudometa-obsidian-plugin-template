@@ -21,14 +21,15 @@ Browser via: `Settings` → `Community Plugins` → `Browse` → Search for _"{{
 ### Development
 
 ```bash
-make init
-make format
-make build
+make init # run once after cloning
+make format # run all formatters
+make build # builds the plugin
+make check # runs the pre-commit hook (without committing)
 ```
 
 > [!NOTE]
 > This repo uses a pre-commit hook, which prevents commits that do not build or
-> do not pass linting.
+> do not pass the checks.
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the developer
