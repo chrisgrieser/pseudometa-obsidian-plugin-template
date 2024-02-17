@@ -5,6 +5,7 @@
 # INFO block commit if there are any issues reported
 set -o errexit
 
+echo
 echo "────────────────────────"
 print "\033[1;34mPre-Commit Hook\033[0m"
 
