@@ -5,7 +5,6 @@
 # INFO block commit if there are any issues reported
 set -o errexit
 
-echo
 echo "Pre-Commit Hook"
 
 echo "(1/4) Biome"
