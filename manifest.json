@@ -3,7 +3,7 @@
 	"name": "{{plugin-name}}",
 	"description": "{{plugin-desc}}",
 	"version": "0.1.0",
-	"minAppVersion": "1.0",
+	"minAppVersion": "1.5.7",
 	"isDesktopOnly": false,
 	"author": "pseudometa",
 	"fundingUrl": "https://ko-fi.com/pseudometa",
