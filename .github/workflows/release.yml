@@ -13,10 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "21.x" # node version, get via `node --version`
+          node-version: "21.x"
 
       - name: Build
         id: build # TODO remove styles.css in cp line, if it isn't used
