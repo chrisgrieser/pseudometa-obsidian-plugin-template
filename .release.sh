@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 # RELEASE OBSIDIAN PLUGIN
 # https://forum.obsidian.md/t/using-github-actions-to-release-plugins/7877
-# https://marcus.se.net/obsidian-plugin-docs/publishing/release-your-plugin-with-github-actions
+# https://docs.obsidian.md/Plugins/Releasing/Release+your+plugin+with+GitHub+Actions
 #───────────────────────────────────────────────────────────────────────────────
 
 # Prompt for version number
@@ -9,7 +9,6 @@ currentVersion=$(grep "version" "./manifest.json" | cut -d\" -f4)
 echo "current version: $currentVersion"
 echo -n "   next version: "
 read -r nextVersion
-echo "────────────────────────"
 
 # GUARD
 if [[ -z "$nextVersion" || "$nextVersion" == "$currentVersion" ]]; then
@@ -24,7 +23,8 @@ sed -E -i '' "s/\"version\".*/\"version\": \"$nextVersion\",/" "package.json"
 # add version number in `versions.json` with min-app-version
 minObsidianVersion=$(grep "minAppVersion" "manifest.json" | cut -d\" -f4)
 last_version_line=$(tail -n2 "versions.json" | head -n1)
-sed -i '' '$d' "versions.json" ; sed -i '' '$d' "versions.json"
+sed -i '' '$d' "versions.json"
+sed -i '' '$d' "versions.json"
 {
 	echo "$last_version_line,"
 	print "\t\"$nextVersion\": \"$minObsidianVersion\""
