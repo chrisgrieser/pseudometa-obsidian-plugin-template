@@ -1,5 +1,5 @@
 # {{plugin-name}}
-![Obsidian Downloads](https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=%24%5B%22{{plugin-id}}%22%5D.downloads&url=https%3A%2F%2Fraw.githubusercontent.com%2Fobsidianmd%2Fobsidian-releases%2Fmaster%2Fcommunity-plugin-stats.json&style=plastic)
+<!--PENDING admission in plugin store ![Obsidian Downloads](https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=%24%5B%22{{plugin-id}}%22%5D.downloads&url=https%3A%2F%2Fraw.githubusercontent.com%2Fobsidianmd%2Fobsidian-releases%2Fmaster%2Fcommunity-plugin-stats.json&style=plastic)-->
 ![Last Release](https://img.shields.io/github/v/release/chrisgrieser/{{plugin-id}}?label=Latest%20Release&style=plastic)
 
 {{plugin-desc}}
@@ -14,9 +14,7 @@
 ## Installation
 For now, the plugin is still in beta. It can be installed with the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
 
-When published, it is going to be available in Obsidian's Community Plugin
-Browser via: `Settings` → `Community Plugins` → `Browse` → Search for _"{{plugin-name}}"_
-
+<!-- PENDING admission in plugin store [Install in Obsidian](https://obsidian.md/plugins?id={{plugin-id}})-->
 
 ### Development
 
