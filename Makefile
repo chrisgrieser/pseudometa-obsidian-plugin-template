@@ -14,13 +14,12 @@ check-all:
 	zsh ./.githooks/pre-commit
 
 check-tsc:
-	npx tsc --noEmit --skipLibCheck --strict
+	npx tsc --noEmit --skipLibCheck --strict && echo "Typescript OK"
 
 release:
 	zsh ./.release.sh
 
 # install dependencies, build, enable git hooks
 init:
-	npm install && \
-	node esbuild.config.mjs
+	npm install && node esbuild.config.mjs ; \
 	git config core.hooksPath .githooks
