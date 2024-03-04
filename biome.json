@@ -14,7 +14,6 @@
 	"formatter": {
 		"lineWidth": 100,
 		"indentStyle": "tab",
-		"indentWidth": 3,
 		"formatWithErrors": true
 	},
 	"linter": {
