@@ -14,15 +14,17 @@
 ## Installation
 For now, the plugin is still in beta. It can be installed with the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
 
-<!-- PENDING admission in plugin store [Install in Obsidian](https://obsidian.md/plugins?id={{plugin-id}})-->
+<!-- PENDING admission in plugin store -->
+<!-- ➡️ [Install in Obsidian](https://obsidian.md/plugins?id={{plugin-id}}) -->
 
 ### Development
 
 ```bash
-make init # run once after cloning
+make init   # run once after cloning
+
 make format # run all formatters
-make build # builds the plugin
-make check # runs the pre-commit hook (without committing)
+make build  # builds the plugin
+make check  # runs the pre-commit hook (without committing)
 ```
 
 > [!NOTE]
