@@ -21,7 +21,6 @@
 		"rules": {
 			"all": true,
 			"nursery": { "useImportType": "off" },
-			"suspicious": { "noConsoleLog": "off" },
 			"complexity": { "noExcessiveCognitiveComplexity": "off" },
 			"style": {
 				"useTemplate": "off",

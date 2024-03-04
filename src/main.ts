@@ -17,7 +17,7 @@ export default class {{plugin-class}} extends Plugin {
 	}
 	
 	myFunction () {
-		console.log("Hello World");
+		console.info("Hello World");
 	}
 
 }
