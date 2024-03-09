@@ -39,9 +39,6 @@ replacePlaceholders "{{plugin-desc}}" "$desc"
 replacePlaceholders "{{plugin-class}}" "$class"
 replacePlaceholders "{{year}}" "$year"
 
-osascript -e 'display notification "" with title "ℹ️ Write Permissions for workflow needed."'
-open "https://github.com/$repo/settings/actions"
-
 #───────────────────────────────────────────────────────────────────────────────
 
 print "\033[1;32mSuccess. Script will delete itself.\033[0m"
