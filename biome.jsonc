@@ -3,14 +3,13 @@
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
-		"useIgnoreFile": true,
-		"defaultBranch": "main"
+		"useIgnoreFile": true
 	},
 	"json": {
-		"parser": { "allowComments": true }
+		"parser": { "allowComments": true } // tsconfig.json allows comments
 	},
 	"javascript": {
-		"globals": ["activeDocument"]
+		"globals": ["activeDocument"] // Electron window
 	},
 	"formatter": {
 		"lineWidth": 100,
