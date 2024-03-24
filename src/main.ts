@@ -1,5 +1,6 @@
 import { Plugin } from "obsidian";
 
+// biome-ignore lint/style/noDefaultExport: required for Obsidian plugins to work
 export default class {{plugin-class}} extends Plugin {
 	cssclass = this.manifest.id;
 
