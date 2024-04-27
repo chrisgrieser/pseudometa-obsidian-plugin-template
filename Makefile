@@ -3,9 +3,9 @@
 # if on macOS, open dev-vault & create symlink to if needed
 build:
 	dev_vault="$$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Development" ; \
-	node esbuild.config.mjs && \
+	node .esbuild.config.mjs && \
 	if [[ "$$OSTYPE" =~ darwin* ]] ; then \
-		plugin_path="$$dev_vault/.obsidian/plugins/{{plugin-id}}" ; \
+		plugin_path="$$dev_vault/.obsidian/plugins/quadro" ; \
 		[[ -e "$$plugin_path" ]] || ln -s "$$PWD" "$$plugin_path" ; \
 		vault_name=$$(basename "$$dev_vault") ; \
 		open "obsidian://open?vault=$$vault_name" ; \
@@ -22,11 +22,11 @@ check-tsc:
 	npx tsc --noEmit --skipLibCheck --strict && echo "Typescript OK"
 
 release:
-	zsh ./.release.sh
+	node .release.mjs
 
 # install dependencies, build, enable git hooks
 init:
 	npm install && \
-	node esbuild.config.mjs ; \
+	node .esbuild.config.mjs ; \
 	git config core.hooksPath .githooks
 
