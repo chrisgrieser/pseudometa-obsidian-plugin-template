@@ -7,6 +7,7 @@
 <!-- toc -->
 
 - [Installation](#installation)
+	* [Development](#development)
 - [About the developer](#about-the-developer)
 
 <!-- tocstop -->
@@ -20,11 +21,11 @@ For now, the plugin is still in beta. It can be installed with the [BRAT Plugin]
 ### Development
 
 ```bash
-make init   # run once after cloning
+just init   # run once after cloning
 
-make format # run all formatters
-make build  # builds the plugin
-make check  # runs the pre-commit hook (without committing)
+just format # run all formatters
+just build  # builds the plugin
+just check  # runs the pre-commit hook (without committing)
 ```
 
 > [!NOTE]
