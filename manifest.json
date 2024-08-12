@@ -5,8 +5,11 @@
 	"version": "0.1.0",
 	"minAppVersion": "1.5.8",
 	"isDesktopOnly": false,
-	"author": "pseudometa",
-	"fundingUrl": "https://ko-fi.com/pseudometa",
+	"author": "pseudometa (aka Chris Grieser)",
 	"authorUrl": "https://chris-grieser.de/",
-	"helpUrl": "https://github.com/{{plugin-repo}}#readme"
+	"helpUrl": "https://github.com/{{plugin-repo}}#readme",
+	"fundingUrl": {
+		"Ko-Fi": "https://ko-fi.com/pseudometa",
+		"PayPal": "https://www.paypal.me/ChrisGrieser"
+	}
 }
