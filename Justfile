@@ -1,23 +1,20 @@
 set quiet := true
 
-vault_path := "$HOME/Vaults/main-vault"
+test_vault := "$HOME/Vaults/main-vault"
 
 #───────────────────────────────────────────────────────────────────────────────
 
+[macos]
 build-and-reload:
     #!/usr/bin/env zsh
     node .esbuild.mjs
-    cp -f "main.js" "{{ vault_path }}/.obsidian/plugins/quadro/main.js"
-    vault_name=$(basename "{{ vault_path }}")
+    cp -f "main.js" "{{ test_vault }}/.obsidian/plugins/quadro/main.js"
+    vault_name=$(basename "{{ test_vault }}")
     open "obsidian://open?vault=$vault_name"
 
-    # reload (INFO: requires registering the URI manually)
+    # reload (INFO: requires registering the URI manually in a helper plugin)
     plugin_id=$(grep '"id"' "./manifest.json" | cut -d'"' -f4)
     open "obsidian://reload-plugin?id=$plugin_id&vault=$vault_name"
-
-format:
-    npx biome format --write "$(git rev-parse --show-toplevel)"
-    npx markdownlint-cli --fix --ignore="node_modules" "$(git rev-parse --show-toplevel)"
 
 check-all:
     zsh ./.githooks/pre-commit
