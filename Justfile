@@ -1,6 +1,6 @@
 set quiet := true
 
-test_vault := "$HOME/Vaults/main-vault"
+test_vault := "$HOME/Vaults/phd-data-analysis"
 
 #───────────────────────────────────────────────────────────────────────────────
 
@@ -25,7 +25,9 @@ check-tsc:
 release:
     node .release.mjs
 
-# install dependencies, build, enable git hooks
+analyze:
+    node .esbuild.mjs analyze
+
 init:
     #!/usr/bin/env zsh
     git config core.hooksPath .githooks
