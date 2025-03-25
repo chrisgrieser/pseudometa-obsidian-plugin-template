@@ -4,22 +4,21 @@ import { Plugin } from "obsidian";
 export default class {{plugin-class}} extends Plugin {
 	cssclass = this.manifest.id;
 
-	override onload() {
+	override onload(): void {
 		console.info(this.manifest.name + " Plugin loaded.");
-		
+
 		this.addCommand({
 			id: "command-id",
 			name: "Command Name",
-			callback: () => this.myFunction(),
+			callback: (): void => this.myFunction(),
 		});
 	}
 
-	override onunload() { 
+	override onunload(): void {
 		console.info(this.manifest.name + " Plugin unloaded.");
 	}
-	
-	myFunction () {
+
+	myFunction(): void {
 		console.info("Hello World");
 	}
-
 }
