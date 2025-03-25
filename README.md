@@ -14,7 +14,8 @@
 <!-- tocstop -->
 
 ## Installation
-For now, the plugin is still in beta. It can be installed with the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
+For now, the plugin is still in beta. It can be installed with the [BRAT
+Plugin](https://github.com/TfTHacker/obsidian42-brat).
 
 <!-- PENDING admission in plugin store -->
 <!-- ➡️ [Install in Obsidian](https://obsidian.md/plugins?id={{plugin-id}}) -->
