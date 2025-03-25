@@ -7,7 +7,7 @@
   {
     "id": "{{plugin-id}}",
     "name": "{{plugin-name}}",
-    "author": "pseudometa",
+    "author": "pseudometa (aka Chris Grieser)",
     "description": "{{plugin-desc}}",
     "repo": "chrisgrieser/{{plugin-id}}"
   }
