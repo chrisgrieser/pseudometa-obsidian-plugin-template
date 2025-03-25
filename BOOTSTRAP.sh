@@ -14,6 +14,10 @@ repo=$(git remote -v | head -n1 | sed -e 's/\.git.*//' -e 's/.*:\(.*\) .*/\1/')
 # INFO "The id can't contain `obsidian`." https://docs.obsidian.md/Plugins/Releasing/Submit+your+plugin#Step+3+Submit+your+plugin+for+review
 id=$(echo "$repo" | cut -d/ -f2 | sed -E 's/-?obsidian-?//')
 desc=$(curl -sL "https://api.github.com/repos/$repo" | grep "description" | head -n1 | cut -d'"' -f4)
+if [[ -z "$desc" ]]; then
+	echo "GitHub repo has no description."
+	exit 1
+fi
 class=$(echo "$id" | perl -pe 's/^(\w)/\U$1/' | perl -pe 's/-(\w)/\U$1/g') # kebab-case to PascalCase
 year=$(date +"%Y")
 
@@ -39,7 +43,7 @@ replacePlaceholders "{{year}}" "$year"
 
 #───────────────────────────────────────────────────────────────────────────────
 
-npm install # also generates `package-lock.json`
+npm install        # also generates `package-lock.json`
 rm -- "$this_file" # make this script delete itself
 
 git add --all && git commit -m "init: bootstrap"
