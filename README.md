@@ -1,26 +1,34 @@
 # {{plugin-name}}
 <!-- PENDING admission in plugin store -->
 <!-- ![Obsidian Downloads](https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=%24%5B%22{{plugin-id}}%22%5D.downloads&url=https%3A%2F%2Fraw.githubusercontent.com%2Fobsidianmd%2Fobsidian-releases%2Fmaster%2Fcommunity-plugin-stats.json&style=plastic)-->
-![Last release](https://img.shields.io/github/v/release/chrisgrieser/{{plugin-id}}?label=Latest%20Release&style=plastic)
+![GitHub download count](https://img.shields.io/github/downloads/{{plugin-repo}}/total?label=GitHub%20Downloads&style=plastic)
+![Last release](https://img.shields.io/github/v/release/{{plugin-repo}}?label=Latest%20Release&style=plastic)
 
 {{plugin-desc}}
 
 <!-- toc -->
 
 - [Installation](#installation)
-	* [Development](#development)
+- [Plugin development](#plugin-development)
 - [About the developer](#about-the-developer)
 
 <!-- tocstop -->
 
 ## Installation
-For now, the plugin is still in beta. It can be installed with the [BRAT
-Plugin](https://github.com/TfTHacker/obsidian42-brat).
+1. Download the [latest release](https://github.com//{{plugin-repo}}/releases/latest/download/{{repo-name}}.zip).
+2. Open Obsidian, go to `Settings → Community plugins`, click the folder icon.
+3. In the folder that opens, create a new folder called `{{plugin-id}}`.
+4. Unzip the downloaded release file and move all files into the folder
+   `{{plugin-id}}`.
+5. Go back to Obsidian, `Settings → Community plugins`, and click the refresh
+   icon.
+6. `{{plugin-name}}` will now appear in your list of plugins. Enable it by
+   checking the box.
 
 <!-- PENDING admission in plugin store -->
 <!-- ➡️ [Install in Obsidian](https://obsidian.md/plugins?id={{plugin-id}}) -->
 
-### Development
+## Plugin development
 
 ```bash
 just init   # run once after cloning

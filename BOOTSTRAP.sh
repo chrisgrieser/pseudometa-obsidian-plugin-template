@@ -9,16 +9,16 @@ echo -n "Plugin name: "
 read -r name
 
 repo=$(git remote -v | head -n1 | sed -e 's/\.git.*//' -e 's/.*:\(.*\) .*/\1/')
+repo_name=$(echo "$repo" | cut -d/ -f2)
 
-# plugin id is the same as the git repo name and can therefore be inferred
-# INFO "The id can't contain `obsidian`." https://docs.obsidian.md/Plugins/Releasing/Submit+your+plugin#Step+3+Submit+your+plugin+for+review
-id=$(echo "$repo" | cut -d/ -f2 | sed -E 's/-?obsidian-?//')
+# id can't contain `obsidian` https://docs.obsidian.md/Plugins/Releasing/Submit+your+plugin#Step+3+Submit+your+plugin+for+review
+obsdian_id=$(echo "$repo_name" | sed -E 's/-?obsidian-?//')
 desc=$(curl -sL "https://api.github.com/repos/$repo" | grep "description" | head -n1 | cut -d'"' -f4)
 if [[ -z "$desc" ]]; then
 	echo "GitHub repo has no description."
 	exit 1
 fi
-class=$(echo "$id" | perl -pe 's/^(\w)/\U$1/' | perl -pe 's/-(\w)/\U$1/g') # kebab-case to PascalCase
+class=$(echo "$obsdian_id" | perl -pe 's/^(\w)/\U$1/' | perl -pe 's/-(\w)/\U$1/g') # kebab-case to PascalCase
 year=$(date +"%Y")
 
 #───────────────────────────────────────────────────────────────────────────────
@@ -35,7 +35,8 @@ function replacePlaceholders() {
 }
 
 replacePlaceholders "{{plugin-name}}" "$name"
-replacePlaceholders "{{plugin-id}}" "$id"
+replacePlaceholders "{{repo-name}}" "$repo_name"
+replacePlaceholders "{{plugin-id}}" "$obsdian_id"
 replacePlaceholders "{{plugin-repo}}" "$repo"
 replacePlaceholders "{{plugin-desc}}" "$desc"
 replacePlaceholders "{{plugin-class}}" "$class"
