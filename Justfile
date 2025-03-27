@@ -1,6 +1,6 @@
 set quiet := true
 
-test_vault := "$HOME/Vaults/main-vault/"
+test_vault := "$HOME/Vaults/writing-vault/"
 
 #───────────────────────────────────────────────────────────────────────────────
 
@@ -16,11 +16,11 @@ build-and-reload:
     vault_name=$(basename "{{ test_vault }}")
     open "obsidian://open?vault=$vault_name"
 
-    # reload (REQUIRED: registering the URI manually in a helper plugin)
+    # reload (REQUIRES: registering the URI manually in a helper plugin)
     open "obsidian://reload-plugin?id=$plugin_id&vault=$vault_name"
 
 check-all:
-    zsh ./.githooks/pre-commit
+    git hook run pre-commit -- "check-all"
 
 check-tsc-qf:
     npx tsc --noEmit --skipLibCheck --strict && echo "Typescript OK"
