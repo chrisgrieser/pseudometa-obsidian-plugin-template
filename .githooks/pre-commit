@@ -23,7 +23,7 @@ echo "✅"
 
 echo "(4/5) Knip"
 npx knip
-echo "✅"
+test -t || echo "✅" # when running in terminal, knip already has output
 
 echo "(5/5) Markdownlint"
 npx markdownlint --ignore="node_modules" .
