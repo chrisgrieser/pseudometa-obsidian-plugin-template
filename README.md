@@ -15,11 +15,12 @@
 <!-- tocstop -->
 
 ## Installation
-1. Download the [latest release](https://github.com//{{plugin-repo}}/releases/latest/download/{{repo-name}}.zip).
+1. Download the
+   [latest release](https://github.com//{{plugin-repo}}/releases/latest/download/{{repo-name}}.zip)
+   files (`main.js`, `manifest.json`, and `styles.css`).
 2. Open Obsidian, go to `Settings → Community plugins`, click the folder icon.
 3. In the folder that opens, create a new folder called `{{plugin-id}}`.
-4. Unzip the downloaded release file and move all files into the folder
-   `{{plugin-id}}`.
+4. Move the three previously downloaded files into the folder `{{plugin-id}}`.
 5. Go back to Obsidian, `Settings → Community plugins`, and click the refresh
    icon.
 6. `{{plugin-name}}` will now appear in your list of plugins. Enable it by
@@ -48,8 +49,7 @@ digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-- [Academic website](https://chris-grieser.de/)
-- [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
+- [Website](https://chris-grieser.de/)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
